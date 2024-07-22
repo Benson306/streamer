@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Route, Routes } from 'react-router-dom';
 import Streamer from "./Streamer";
 import MySVG from './images/play.svg';
 
@@ -10,7 +10,7 @@ function App() {
         <span>IKO NINI STREAMER</span>
       </div>
         <Routes>
-          <Route path="/streamer/:vid_id" element={<Streamer />} />
+          <Route path="/streamer/:token" element={<Streamer />} />
         </Routes>
     </div>
   );
