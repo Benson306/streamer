@@ -9,7 +9,7 @@ function Streamer() {
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch(`${process.env.REACT_APP_API_UL}/get_stream_data?token=${token}`)
+        fetch(`${process.env.REACT_APP_API_URL}/get_stream_data?token=${token}`)
         .then(res => res.json())
         .then(data => {
             setPlaybackId(data.playbackId)
