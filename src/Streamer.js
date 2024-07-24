@@ -13,8 +13,8 @@ function Streamer() {
         fetch(`${process.env.REACT_APP_API_URL}/get_stream_data?token=${token}`)
         .then(res => res.json())
         .then(data => {
-            setPlaybackId(data.playback_id)
-            setPlaybackToken(data.playback_token);
+            setPlaybackId(data.playbackId)
+            setPlaybackToken(data.playbackToken);
             setLoading(false);
         })
         .catch(err => {
