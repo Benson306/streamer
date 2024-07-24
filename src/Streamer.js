@@ -6,13 +6,15 @@ import FadeLoader from "react-spinners/FadeLoader";
 function Streamer() {
     const { token } = useParams();
     const [playbackId, setPlaybackId] = useState(null);
+    const [playbackToken, setPlaybackToken] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
         fetch(`${process.env.REACT_APP_API_URL}/get_stream_data?token=${token}`)
         .then(res => res.json())
         .then(data => {
-            setPlaybackId(data.playbackId)
+            setPlaybackId(data.playback_id)
+            setPlaybackToken(data.playback_token);
             setLoading(false);
         })
         .catch(err => {
@@ -33,6 +35,7 @@ function Streamer() {
         : 
         <MuxPlayer
         playbackId={playbackId}
+        playbackToken={playbackToken}
         accentColor="#ffcc00"
         ></MuxPlayer> 
       }
