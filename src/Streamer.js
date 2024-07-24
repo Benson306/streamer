@@ -13,8 +13,8 @@ function Streamer() {
         fetch(`${process.env.REACT_APP_API_URL}/get_stream_data?token=${token}`)
         .then(res => res.json())
         .then(data => {
-            setPlaybackId(data.playbackId)
-            setPlaybackToken(data.playbackToken);
+            setPlaybackId(data.playback_id)
+            setPlaybackToken(data.playback_token);
             setLoading(false);
         })
         .catch(err => {
@@ -35,10 +35,10 @@ function Streamer() {
         : 
         <MuxPlayer
           playbackId={playbackId}
-          // tokens={{ playback: playbackToken}}
-          playbackToken={playbackToken}
+          tokens={{ playback: playbackToken}}
+          //playbackToken={playbackToken}
           accentColor="#ffcc00"
-          // streamType='on-demand'
+          streamType='on-demand'
         ></MuxPlayer> 
       }
     </div>
