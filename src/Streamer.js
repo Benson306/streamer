@@ -38,7 +38,7 @@ function Streamer() {
           tokens={{ playback: playbackToken}}
           // playbackToken={playbackToken}
           accentColor="#ffcc00"
-          streamType='on-demand'
+          // streamType='on-demand'
         ></MuxPlayer> 
       }
     </div>
