@@ -15,7 +15,6 @@ function Streamer() {
         .then(data => {
             setPlaybackId(data.playbackId)
             setPlaybackToken(data.playbackToken);
-            console.log(data);
             setLoading(false);
         })
         .catch(err => {
