@@ -34,9 +34,10 @@ function Streamer() {
         </div> 
         : 
         <MuxPlayer
-        playbackId={playbackId}
-        playbackToken={playbackToken}
-        accentColor="#ffcc00"
+          playbackId={playbackId}
+          playbackToken={playbackToken}
+          accentColor="#ffcc00"
+          streamType='on-demand'
         ></MuxPlayer> 
       }
     </div>
